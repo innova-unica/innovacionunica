@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Futuro innovador UNICA</title>
+    <meta
+      name="description"
+      content="Descubrí tu forma de innovar y llevate tu carnet de Futuro innovador UNICA."
+    />
+    <meta name="theme-color" content="#065D79" />
+    <meta property="og:title" content="Futuro innovador UNICA" />
+    <meta property="og:description" content="Descubrí tu forma de innovar en 2 minutos." />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FD8446' d='M50 4L59 12L71 9L77 20L89 23L90 35L98 44L91 54L95 65L85 72L83 84L71 86L64 96L54 91L43 97L35 88L23 90L18 79L7 74L9 62L2 53L10 43L9 31L20 26L24 14L36 14L42 5Z'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/outfit-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-pantalla="inicio">
+    <a class="saltar" href="#principal">Saltar al contenido</a>
+
+    <div class="pagina">
+      <header class="cabecera">
+        <img
+          src="assets/logos/unica-azul-marino.png"
+          width="1080"
+          height="424"
+          alt="UNICA, Universidad Cardenal Miguel Obando Bravo"
+        />
+      </header>
+
+      <main id="principal" tabindex="-1">
+        <!-- Inicio -->
+        <section id="pantalla-inicio" class="inicio" aria-labelledby="titulo-inicio">
+          <div class="fila-formas" id="formas-arriba" aria-hidden="true"></div>
+          <h1 id="titulo-inicio">Descubrí tu forma de innovar</h1>
+          <p class="entrada">
+            No hace falta ser genio para innovar. Hay muchas formas de aportar, y este test te ayuda
+            a descubrir la tuya.
+          </p>
+          <p class="meta">Son 8 preguntas, toma unos 2 minutos y no necesitás registrarte.</p>
+          <p><button class="boton" id="boton-empezar" type="button">Empezar</button></p>
+          <div class="fila-formas" id="formas-abajo" aria-hidden="true"></div>
+        </section>
+
+        <!-- Preguntas -->
+        <section id="pantalla-preguntas" hidden aria-labelledby="enunciado">
+          <ol class="progreso" id="progreso" aria-label="Progreso del test"></ol>
+          <div class="barra-pregunta">
+            <p class="contador" id="contador"></p>
+            <button class="boton-texto" id="boton-atras" type="button">Volver a la anterior</button>
+          </div>
+          <h2 id="enunciado" tabindex="-1"></h2>
+          <ul class="opciones" id="opciones"></ul>
+          <p class="nota">No hay respuestas correctas. Elegí la que más se parezca a vos.</p>
+        </section>
+
+        <!-- Resultado (se arma con JavaScript) -->
+        <section id="pantalla-resultado" class="resultado" hidden aria-labelledby="perfil-titulo"></section>
+      </main>
+
+      <footer class="pie">
+        <p id="credito"></p>
+      </footer>
+    </div>
+
+    <p class="solo-lectores" id="anuncios" role="status" aria-live="polite"></p>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

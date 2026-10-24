@@ -1,0 +1,14 @@
+{
+  "name": "quiz-innovacion-unica",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Quiz de perfiles de innovación y carnet digital para el stand de Innovación de UNICA",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "start": "python3 -m http.server 8080 --directory public"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.6"
+  }
+}
